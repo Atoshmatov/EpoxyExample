@@ -1,0 +1,19 @@
+query Chapter($characterId:ID!){
+    character(id: $characterId){
+        ...ChapterDetail
+    }
+}
+
+fragment ChapterDetail on Character{
+    id
+    name
+    status
+    species
+    type
+    gender
+    location {
+        id
+        name
+    }
+    image
+}

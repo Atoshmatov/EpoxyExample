@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="5dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="@color/card"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/personImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/person"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+        <TextView
+                android:id="@+id/personName"
+                android:textColor="@color/black"
+                tools:text="Rick Sanchez"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toTopOf="@id/personCreated"
+                app:layout_constraintTop_toTopOf="@id/personImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/personImage" />
+
+        <TextView
+                android:id="@+id/personCreated"
+                android:textColor="@color/black"
+                tools:text="2017-11-04T18:48:46.250Z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/personImage"
+                app:layout_constraintBottom_toBottomOf="@+id/personImage"
+                app:layout_constraintTop_toBottomOf="@+id/personName" />
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="1dp"
+                android:backgroundTint="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    tools:text="Male"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="SmallSp" />
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
