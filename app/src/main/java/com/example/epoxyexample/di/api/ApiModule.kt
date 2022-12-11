@@ -9,7 +9,9 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-interface ApiModule {
+abstract class ApiModule {
     @Binds
-    fun bindChapterApi(impl: ChapterApiImpl): ChapterApi
+    abstract fun bindChapterApi(
+        impl: ChapterApiImpl
+    ): ChapterApi
 }

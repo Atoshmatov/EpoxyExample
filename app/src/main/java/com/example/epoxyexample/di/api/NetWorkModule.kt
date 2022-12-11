@@ -19,7 +19,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class NetWorkModule {
+object NetWorkModule {
 
     @[Provides Singleton]
     fun provideHttpClient(): OkHttpClient {
@@ -43,6 +43,9 @@ class NetWorkModule {
 
     @[Provides Singleton]
     fun provideChapterApi(
-        apolloClient: ApolloClient, @ApplicationContext context: Context
-    ): ChapterApi = ChapterApiImpl(apolloClient, context)
+        apolloClient: ApolloClient,
+        @ApplicationContext context: Context
+    ): ChapterApi {
+        return ChapterApiImpl(context = context, apolloClient = apolloClient)
+    }
 }

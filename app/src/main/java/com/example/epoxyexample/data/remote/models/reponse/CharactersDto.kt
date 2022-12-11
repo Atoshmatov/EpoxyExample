@@ -1,6 +1,6 @@
-package com.example.epoxyexample.data.remote.models
+package com.example.epoxyexample.data.remote.models.reponse
 
-data class CharactersML(
+data class CharactersDto(
     val id: String,
     val name: String,
     val image: String,
